@@ -134,25 +134,22 @@
         .final-cta-panel a:hover { transform: scale(1.05); background-color: var(--color-tertiary); color: #322B25; }
         .video-modal-content { width: 90%; max-width: 960px; position: relative; transform: scale(0.8); opacity: 0; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease; }
         .video-modal.active .video-modal-content { transform: scale(1); opacity: 1; }
-        /*.video-wrapper { position: relative; padding-top: 56.25%; }
-        .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; transform: scale(1.1);}*/
-
         .video-wrapper { 
-    position: relative; 
-    padding-top: 56.25%; /* Proporción 16:9 por defecto */
-    height: 0; 
-    overflow: hidden; 
-    border-radius: 8px; /* Mantiene los bordes redondeados del contenedor */
-    background-color: #000; /* Fondo negro para evitar flashes de carga */
-}
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
+            position: relative; 
+            padding-top: 56.25%; /* Proporción 16:9 por defecto */
+            height: 0; 
+            overflow: hidden; 
+            border-radius: 8px; /* Mantiene los bordes redondeados del contenedor */
+            background-color: #000; /* Fondo negro para evitar flashes de carga */
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
 
         .main-footer { background-color: var(--color-primary); color: var(--color-tertiary); padding: 60px 0 30px; }
@@ -194,12 +191,8 @@
             .method-visuals { display: flex; flex-direction: column; gap: 20px; }
             .method-step { margin-bottom: 0; }
 
-            /*.video-modal.active .video-modal-content { transform: scale(0.85); }
-            .video-modal-content{ width: 85%; }
-            .video-wrapper { padding-top: 85%; }
-            .video-wrapper video{ transform: scale(1.7); }*/
             .video-wrapper {
-                padding-top: 100%; /* Proporción 4:3 para móvil */
+                padding-top: 99%; /* Proporción 4:3 para móvil */
             }
         }
     </style>
@@ -391,7 +384,6 @@
         <div class="video-modal-close" id="videoModalClose">&times;</div>
         <div class="video-modal-content">
             <div class="video-wrapper">
-                <!-- <video id="approachVideo" src="https://www.instagram.com/reel/DNErwXmMdQ3/?igsh=amlzdHhjMDkyNnJw.mp4" controls preload="none"></video> -->
                 <iframe id="youtube-player" 
                         src="https://youtube.com/embed/m_wo1Pa7mDA?feature=shared" 
                         title="YouTube video player" 
